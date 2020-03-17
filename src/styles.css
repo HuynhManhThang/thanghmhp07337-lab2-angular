@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+body{
+  background: linear-gradient(120deg,#e7cb7d,#c6ced4,#fffab9);
+  min-height: 100vh;
+  padding-top:88px; 
+}
+#mau1{
+  background: rgba(255,255,255,0.3);
+}
+#mau2{
+  background: rgba(0,0,0,.5);
+  color: #fff;
+}
