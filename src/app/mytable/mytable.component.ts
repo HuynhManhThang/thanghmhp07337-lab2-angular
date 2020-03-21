@@ -8,7 +8,8 @@ import { ProductService } from "../services/product.service";
   styleUrls: ["./mytable.component.css"]
 })
 export class MytableComponent implements OnInit {
-products  :Product[];
+products  :Product[];//hienthi danhsach
+product: Product = new Product();//[(ngmodel)]
   constructor(
     private productServices:ProductService,
   ) {}
@@ -27,6 +28,11 @@ products  :Product[];
   //XOA =services
   xoa(id){
    this.products = this.productServices.removeProduct(id);
+  }
+//thêm sản phẩm
+  addProduct(){
+    this.productServices.addProduct(this.product)
+    // console.log(this.product)
   }
   //Hien Thi bang service
  /*
