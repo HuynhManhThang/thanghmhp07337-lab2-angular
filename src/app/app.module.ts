@@ -9,9 +9,10 @@ import { SlideComponent } from './slide/slide.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductService } from './services/product.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule],
   declarations: [ AppComponent, HelloComponent, MytableComponent, SlideComponent, ProductListComponent, CategoryComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
