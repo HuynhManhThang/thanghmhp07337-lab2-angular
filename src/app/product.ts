@@ -1,7 +1,7 @@
 export class Product{
   id: number;
   name: string;
-  price:number;
+  price:  number;
   desc: string;
-
+  img: string;
 }

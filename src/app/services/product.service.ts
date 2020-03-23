@@ -11,8 +11,9 @@ getProducts(){
   console.log("ô tô")
   return this.products;
 }
-getProduct(product){
-   this.selected=product;
+getProduct(id){
+   console.log(id);
+  return this.products.find(product => product.id == id)
 }
 removeProduct(id){
 console.log('${id} đây là id của service')
@@ -27,4 +28,5 @@ console.log(product);
 this.products.push(product);
 console.log(this.products)
 }
+
 }

@@ -1,26 +1,31 @@
 <div class="row">
-	<!-- <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
+	<div class="col-lg-3">
+		<app-category></app-category>
+	</div>
+	<div class="col-lg-9">
+		<app-slide></app-slide>
+		<div class="row">
+			<!-- <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
 	<app-product class="col-lg-4 col-md-6 mb-4"></app-product>
 	<app-product class="col-lg-4 col-md-6 mb-4"></app-product> -->
-	<div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
-		<div class="card h-100">
-			<a href="#"><img class="card-img-top" src="https://dummyimage.com/700x400/0000/fff" alt=""></a>
-				<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">{{product.name}}</a>
-					</h4>
-					<h5>${{product.price}}</h5>
-					<p class="card-text">{{product.desc}}</p>
+			<div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="{{product.img}}" alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a routerLink="/product/detail/{{product.id}}">{{product.name}}</a>
+							</h4>
+							<h5>${{product.price}}</h5>
+							<p class="card-text">{{product.desc}}</p>
 
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+							<button class="btn btn-primary" routerLink="/product/detail/{{product.id}}">Chi tiết</button>
+						</div>
 				</div>
-				<div class="card-footer">
-            	<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-						<button class="btn btn-primary">Chi tiết</button>
-				</div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="detail" *ngIf="selected">
-	{{selected.name}}
 </div>
 <!-- /.row -->

@@ -1,3 +1,7 @@
+<header class="d-flex mb-3 justify-content-between">
+  <h2>Manager Product</h2>
+   <button type="button" class="btn btn-primary" (click)="addProduct()" >Add product</button>
+</header>
 <form>
     <div class="form-group">
         <label for="">ID</label>
@@ -18,7 +22,7 @@
         <input type="text" class="form-control" name="desc" [(ngModel)]="product.desc">
     </div>
 
-    <button type="button" class="btn btn-primary" (click)="addProduct()" >Add product</button>
+ 
 </form>
 
 <div class="SumProduct" style="padding-top:45px">
@@ -26,15 +30,15 @@
 	<table class="table table-bordered table-hover" id="mau1">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th>Stt</th>
 				<th>Name</th>
 				<th>Price</th>
 				<th>Action</th>
 			</tr>
 		</thead>
-		<tbody *ngFor="let product of products">
+		<tbody *ngFor="let product of products,index as  i">
 			<tr>
-				<td>{{product.id}}</td>
+				<td>{{i}}</td>
 				<td>{{product.name}}</td>
 				<td>${{product.price}}</td>
         <td>{{product.desc}}</td>
@@ -47,7 +51,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="deltail" *ngIf="selected">
+	<!-- <div class="deltail" *ngIf="selected">
 		<h3>Detail</h3>
 		<table class="table table-bordered table-hover" id="mau2">
 			<thead>
@@ -67,5 +71,5 @@
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	</div> -->
 </div>

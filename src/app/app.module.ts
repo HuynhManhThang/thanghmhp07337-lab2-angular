@@ -10,10 +10,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductService } from './services/product.service';
 import { AppRoutingModule } from './app-routing.module';
+import { Error404Component } from './error404/error404.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule],
-  declarations: [ AppComponent, HelloComponent, MytableComponent, SlideComponent, ProductListComponent, CategoryComponent ],
+  declarations: [ AppComponent, HelloComponent, MytableComponent, SlideComponent, ProductListComponent, CategoryComponent, Error404Component, ProductDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
